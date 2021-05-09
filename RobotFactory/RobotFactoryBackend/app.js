@@ -6,11 +6,10 @@ const low = require("lowdb");
 const FileSync = require("lowdb/adapters/FileSync");
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
-var robotsRouter=require("./routes/robots")
+var robotsRouter = require("./routes/robots");
 const Lowdb = require("lowdb");
 const { setCors } = require("./middleware/security");
 var app = express();
-
 app.use(logger("dev"));
 
 const adapter = new FileSync("data/db.json");
@@ -23,6 +22,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 app.use(setCors);
+app.use("/", indexRouter);
+app.use("/users", usersRouter);
+app.use("/robots", robotsRouter);
 app.use((err, req, res, next) => {
   res.status(500).send({
     error: {
@@ -30,7 +32,5 @@ app.use((err, req, res, next) => {
     },
   });
 });
-app.use("/", indexRouter);
-app.use("/users", usersRouter);
-app.use("/robots",robotsRouter)
+
 module.exports = app;
