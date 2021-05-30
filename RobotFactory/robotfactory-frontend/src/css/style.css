@@ -139,8 +139,6 @@ html {
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 0;
-  left: 0;
 }
 
 .imageshow img {
@@ -153,7 +151,6 @@ html {
   background-repeat: no-repeat;
   opacity: 0.5;
   transition: opacity 5s;
-
 }
 /*end of background image */
 
@@ -200,17 +197,20 @@ html {
   border-radius: 0.5rem;
   margin-bottom: 3rem;
   cursor: pointer;
-
 }
 
 .section-2-banner h2{
     font-size: 4rem;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 .section-2-banner li,
 .section-2-banner span {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-weight: 400;
 }
+
 
 .section-2-banner .imageshow {
   width: 100%;
@@ -265,8 +265,10 @@ html {
 .section-3-banner li{
   font-size: 2rem;
   text-align: center;
-  font-weight: 500;
+  font-weight: 600;
 }
+
+
 
 .section-3-banner button{
   padding: 1rem 4rem;
@@ -285,4 +287,131 @@ html {
 
 /* end of section 3 */
 
+/* responsive */
 
+
+@media (min-width:600px){
+  .section-1-banner h1 {
+    font-size: 5rem;
+    text-align: center;
+  }
+
+  .section-1-banner p {
+    text-align: center;
+  }
+
+  
+}
+
+
+@media (max-width: 600px) {
+
+  .div-navbar {
+  right: 4rem;
+}
+
+
+    .section-1-banner h1 {
+    font-size: 2.2rem;
+    text-align: center;
+    font-weight: 600;
+  }
+    .section-1-banner p {
+    text-align: center;
+    font-size: 1.7rem;
+  }
+
+
+
+}
+@media (min-width:280px) and (max-width:653px){
+
+
+    .section-1-banner h1 {
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .section-1-banner p{
+    margin: 3rem 0 2rem 0;
+  }
+
+  .section-1-banner span {
+    font-size: 2rem;
+  }
+
+}
+
+
+
+
+
+@media (min-width:320px) and (max-width:568px){
+
+.section-1-banner {
+  margin-top: 5rem;
+}
+
+    .section-1-banner p {
+      margin: 2rem 0 2rem 0;
+  }
+
+
+.section-1-banner span {
+  font-size: 1.8rem;
+}
+
+  .div-navbar {
+  right: 3rem;
+}
+
+
+}
+
+@media (max-width: 653px) {
+
+.section-2-banner h1{
+  font-size: 3rem;
+}
+
+.section-2-banner h2{
+ font-size: 2rem;
+}
+}
+
+@media (min-width:320px) and (max-width:568px){
+  .section-2-banner h1{
+    font-size: 3rem;
+  }
+}
+
+@media (min-width:320px) and (max-width:568px){
+.section-3-banner {
+  margin-top: 15rem;
+}
+
+.section-3-banner button{
+  padding: 1rem 1rem;
+}
+
+.imageshow img {
+  height: 120vh;
+}
+}
+
+@media (min-width:280px) and (max-width:653px){
+.section-3-banner{
+  margin-top: 15rem;
+}
+
+.imageshow img {
+  height: 120vh;
+}
+
+.section-3-banner button{
+  padding: 1rem 1rem;
+  font-size: 1.5rem;
+}
+
+}
